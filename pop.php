@@ -1,4 +1,3 @@
-<?php include 'index.php'?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,7 +6,7 @@
     <title>Abrir factura_ejemplo</title>
 </head>
 <body>
-    <button onclick="window.open('<?php echo $filePath; ?>', '_blank', 'width=800,height=600');">
+    <button onclick="window.open('index.php', '_blank', 'width=800,height=600');">
         Abrir factura_ejemplo
     </button>
 </body>

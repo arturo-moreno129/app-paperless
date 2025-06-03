@@ -22,8 +22,8 @@ $dompdf->loadHtml($html);
 $dompdf->setPaper('A4', 'portrait');
 $dompdf->render();
 
-// Guardar el PDF en el servidor
-$pdfOutput = $dompdf->output();
-$filePath = 'factura_ejemplo.pdf';
-file_put_contents($filePath, $pdfOutput);
+// Envía el PDF al navegador sin forzar la descarga
+header('Content-Type: application/pdf');
+echo $dompdf->output();
+exit;
 ?>
